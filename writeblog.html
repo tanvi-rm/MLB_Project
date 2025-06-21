@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Write Blog - LinguaBlog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.quilljs.com/1.3.6/quill.snow.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="min-h-screen flex flex-col bg-purple-950 text-gray-800">
+    <!-- Header/Navigation -->
+    <header
+      class="bg-purple-950 shadow-sm py-4 px-10 border-b border-purple-900 relative z-20"
+    >
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-2xl font-bold gradient-text">LinguaBlog</h1>
+        <nav class="hidden md:flex space-x-7">
+          <a
+            href="index.html"
+            class="text-gray-200 hover:text-white font-medium py-2"
+            >Home</a
+          >
+          <a href="#" class="text-gray-200 hover:text-white font-medium py-2"
+            >Explore</a
+          >
+          <a
+            href="aboutus.html"
+            class="text-gray-200 hover:text-white font-medium py-2"
+            >About</a
+          >
+          <a
+            href="contactus.html"
+            class="text-gray-200 hover:text-white font-medium py-2"
+            >Contact</a
+          >
+          <img src="assests/profile-user1.png" alt="" class="w-9 h-9" />
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow py-8 px-4 md:px-10">
+      <div
+        class="container mx-auto max-w-6xl bg-white rounded-xl shadow-lg p-6 md:p-8"
+      >
+        <!-- Language Selection Toolbar -->
+        <div class="mb-6">
+          <label class="block text-sm font-medium text-gray-700 mb-2"
+            >Blog Language</label
+          >
+          <div class="flex flex-wrap gap-3">
+            <button
+              class="language-btn px-4 py-2 md:px-4 md:py-2 md:text-base rounded-full bg-purple-600 text-white font-medium"
+              data-lang="en"
+            >
+              English
+            </button>
+            <button
+              class="language-btn px-4 py-2 md:px-4 md:py-2 md:text-base rounded-full bg-gray-200 text-gray-700 font-medium"
+              data-lang="hi"
+            >
+              हिन्दी (Hindi)
+            </button>
+            <button
+              class="language-btn px-4 py-2 md:px-4 md:py-2 md:text-base rounded-full bg-gray-200 text-gray-700 font-medium"
+              data-lang="mr"
+            >
+              मराठी (Marathi)
+            </button>
+          </div>
+          <span id="error-language" class="text-red-600 text-sm hidden"></span>
+        </div>
+
+        <!-- Blog Metadata Section -->
+        <div class="mb-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label
+              for="blog-title"
+              class="block text-sm font-medium text-gray-700 mb-1"
+              >Title</label
+            >
+            <input
+              type="text"
+              id="blog-title"
+              class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+            />
+            <span id="error-title" class="text-red-600 text-sm hidden"></span>
+          </div>
+          <div>
+            <label
+              for="blog-category"
+              class="block text-sm font-medium text-gray-700 mb-1"
+              >Category</label
+            >
+            <select
+              id="blog-category"
+              class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+            >
+              <option value="">Select a category</option>
+              <option value="technology">Technology</option>
+              <option value="travel">Travel</option>
+              <option value="nature">Nature</option>
+              <option value="lifestyle">Lifestyle</option>
+              <option value="personal">Personal</option>
+              <option value="education">Education</option>
+            </select>
+            <span id="error-category" class="text-red-600 text-sm hidden"></span>
+          </div>
+          <div class="md:col-span-2">
+            <label
+              for="blog-description"
+              class="block text-sm font-medium text-gray-700 mb-1"
+              >Short Description (One line)</label
+            >
+            <input
+              type="text"
+              id="blog-description"
+              class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+            />
+            <span id="error-description" class="text-red-600 text-sm hidden"></span>
+          </div>
+          <div class="md:col-span-2">
+            <label
+              for="blog-tags"
+              class="block text-sm font-medium text-gray-700 mb-1"
+              >Tags (Separate with commas)</label
+            >
+            <input
+              type="text"
+              id="blog-tags"
+              class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+              placeholder="e.g., programming, travel, javascript"
+            />
+            <span id="error-tags" class="text-red-600 text-sm hidden"></span>
+          </div>
+        </div>
+
+        <!-- Content Creation Area -->
+        <div class="mb-6">
+          <label class="block text-sm font-medium text-gray-700 mb-2"
+            >Blog Content</label
+          >
+          <div id="editor"></div>
+          <div
+            class="flex justify-between items-center mt-2 text-sm text-gray-500"
+          >
+            <div id="word-count">0 words</div>
+            <div id="auto-save-status" class="text-purple-600">Auto-saved</div>
+          </div>
+          <span id="error-content" class="text-red-600 text-sm hidden"></span>
+        </div>
+
+        <!-- cover page image upload -->
+        <div class="mb-6">
+          <label class="block text-sm font-medium text-gray-700 mb-2"
+            >Upload Cover Image</label
+          >
+          <div
+            class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md"
+          >
+            <div class="text-center">
+              <svg
+                class="mx-auto h-12 w-12 text-gray-400"
+                stroke="currentColor"
+                fill="none"
+                viewBox="0 0 48 48"
+                aria-hidden="true"
+              >
+                <path
+                  d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+              <div class="flex text-sm text-gray-600">
+                <label
+                  for="file-upload"
+                  class="relative w-full text-center cursor-pointer bg-white rounded-md font-medium text-purple-600 hover:text-purple-500 focus-within:outline-none"
+                >
+                  <span>Upload an image</span>
+                  <input
+                    id="file-upload"
+                    name="file-upload"
+                    type="file"
+                    class="sr-only"
+                  />
+                </label>
+              </div>
+              <p class="text-xs text-gray-500">PNG, JPG up to 5MB</p>
+            </div>
+          </div>
+          <span id="error-image" class="text-red-600 text-sm hidden"></span>
+        </div>
+
+        <!-- Plagiarism Check System -->
+        <div class="mb-8 p-4 border rounded-lg">
+          <div class="flex justify-between items-center mb-3">
+            <h3 class="text-lg font-medium text-gray-700">Plagiarism Check</h3>
+            <button
+              id="plagiarism-check-btn"
+              class="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+            >
+              Check for Plagiarism
+            </button>
+          </div>
+          <div
+            id="plagiarism-result"
+            class="hidden p-3 rounded-lg text-sm font-medium"
+          >
+            <div class="flex items-center">
+              <span id="plagiarism-score" class="font-bold mr-2">0%</span>
+              <span id="plagiarism-message"></span>
+            </div>
+            <div class="mt-2 text-xs" id="plagiarism-details"></div>
+          </div>
+          <span id="error-plagiarism" class="text-red-600 text-sm hidden"></span>
+        </div>
+
+        <!-- Publish Controls -->
+        <div class="space-x-4">
+          <button
+            id="publish-btn"
+            class="w-full px-6 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+          >
+            Publish Blog
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="relative bg-gradient-to-r from-purple-700 to-purple-950 text-white py-12 px-10 mt-auto text-center"
+    >
+      <!-- Glowing Background Elements -->
+      <div class="absolute inset-0 overflow-hidden">
+        <div
+          class="absolute bottom-10 right-10 w-32 h-32 rounded-full bg-blue-400 opacity-10 blur-xl"
+        ></div>
+      </div>
+
+      <div
+        class="relative z-10 container mx-auto grid grid-cols-1 md:grid-cols-4"
+      >
+        <div>
+          <h3 class="text-xl font-bold mb-4">LinguaBlog</h3>
+        </div>
+
+        <div>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="hover:text-blue-300">Home</a></li>
+            <li>
+              <a href="aboutus.html" class="hover:text-blue-300">About</a>
+            </li>
+            <li>
+              <a href="contactus.html" class="hover:text-blue-300">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="mailto:kunalkavathekar@gmail.com"
+                class="hover:text-blue-300"
+                >Email</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/kunal-kavathekar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                class="hover:text-blue-300"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/kunalsk36?igsh=dW84dWNxMHh1cDFq"
+                class="hover:text-blue-300"
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://x.com/Kunalsk369?t=_uTprvE-C0CEUtzbF4_WVA&s=09"
+                class="hover:text-blue-300"
+                >Twitter</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-blue-300">Privacy policy</a></li>
+            <li>
+              <a href="#" class="hover:text-blue-300">Terms of Service</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="relative z-10 container mx-auto mt-12 pt-6 border-t border-gray-700 text-center text-gray-400"
+      >
+        <p>&copy; 2025 LinguaBlog. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Quill JS Rich Text Editor -->
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script src="js/writeBlogScript.js"></script>
+  </body>
+</html>

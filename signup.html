@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - LinguaBlog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="min-h-screen flex flex-col bg-purple-950 text-white">
+    <!-- Header -->
+    <header
+      class="bg-purple-950 shadow-sm py-4 px-10 border-b border-purple-900 relative z-20"
+    >
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-2xl font-bold gradient-text">LinguaBlog</h1>
+        <nav class="hidden md:flex space-x-7">
+          <a
+            href="index.html"
+            class="text-gray-200 hover:text-white font-medium py-2"
+            >Home</a
+          >
+          <a href="#" class="text-gray-200 hover:text-white font-medium py-2"
+            >Explore</a
+          >
+          <a
+            href="aboutus.html"
+            class="text-gray-200 hover:text-white font-medium py-2"
+            >About</a
+          >
+          <a
+            href="contactus.html"
+            class="text-gray-200 hover:text-white font-medium py-2"
+            >Contact</a
+          >
+          <a
+            href="#"
+            class="text-gray-200 hover:text-white hover:bg-purple-700 font-medium bg-purple-800 py-2 px-4 rounded-full"
+            >Log In</a
+          >
+          <a
+            href="#"
+            class="text-gray-200 hover:text-white hover:bg-purple-700 font-medium bg-purple-800 py-2 px-4 rounded-full"
+            >Sign Up</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- Signup Form -->
+    <main class="flex-grow flex items-center justify-center px-4 py-16">
+      <div
+        class="bg-[#1c1e3f] border border-purple-800 shadow-2xl rounded-2xl px-10 py-10 w-full max-w-md my-16"
+      >
+        <h2 class="text-3xl font-bold text-center mb-8">Create Your Account</h2>
+        <form action="/signup" method="POST" class="space-y-6">
+          <div>
+            <label for="name" class="block text-sm font-medium mb-2"
+              >Full Name</label
+            >
+            <input
+              type="text"
+              name="name"
+              id="name"
+              required
+              class="w-full px-4 py-3 rounded-lg bg-[#2b2d56] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+              placeholder="John Doe"
+            />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium mb-2"
+              >Email address</label
+            >
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              class="w-full px-4 py-3 rounded-lg bg-[#2b2d56] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+              placeholder="you@example.com"
+            />
+          </div>
+          <div>
+            <label for="password" class="block text-sm font-medium mb-2"
+              >Password</label
+            >
+            <input
+              type="password"
+              name="password"
+              id="password"
+              required
+              class="w-full px-4 py-3 rounded-lg bg-[#2b2d56] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+              placeholder="••••••••"
+            />
+          </div>
+          <div>
+            <label for="confirm-password" class="block text-sm font-medium mb-2"
+              >Confirm Password</label
+            >
+            <input
+              type="password"
+              name="confirm_password"
+              id="confirm-password"
+              required
+              class="w-full px-4 py-3 rounded-lg bg-[#2b2d56] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+              placeholder="••••••••"
+            />
+          </div>
+          <div>
+            <button
+              type="submit"
+              class="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:opacity-90 transition duration-300 text-white font-bold py-3 px-6 rounded-full shadow-lg"
+            >
+              Sign Up
+            </button>
+          </div>
+        </form>
+        <p class="mt-6 text-center text-sm text-gray-400">
+          Already have an account?
+          <a
+            href="signin.html"
+            class="text-purple-400 hover:text-purple-300 underline"
+            >Log in here</a
+          >
+        </p>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="relative bg-gradient-to-r from-purple-700 to-purple-950 text-white py-12 px-10 mt-auto text-center"
+    >
+      <div class="absolute inset-0 overflow-hidden">
+        <div
+          class="absolute bottom-10 right-10 w-32 h-32 rounded-full bg-blue-400 opacity-10 blur-xl"
+        ></div>
+      </div>
+      <div
+        class="relative z-10 container mx-auto grid grid-cols-1 md:grid-cols-4"
+      >
+        <div><h3 class="text-xl font-bold mb-4">LinguaBlog</h3></div>
+        <div>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-blue-300">Home</a></li>
+            <li><a href="#" class="hover:text-blue-300">About</a></li>
+            <li><a href="#" class="hover:text-blue-300">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-blue-300">Email</a></li>
+            <li><a href="#" class="hover:text-blue-300">LinkedIn</a></li>
+            <li><a href="#" class="hover:text-blue-300">Instagram</a></li>
+            <li><a href="#" class="hover:text-blue-300">Twitter</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-blue-300">Privacy policy</a></li>
+            <li>
+              <a href="#" class="hover:text-blue-300">Terms of Service</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="relative z-10 container mx-auto mt-12 pt-6 border-t border-gray-700 text-center text-gray-400"
+      >
+        <p>&copy; 2025 LinguaBlog. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

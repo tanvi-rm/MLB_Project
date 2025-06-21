@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile | LinguaBlog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="min-h-screen flex flex-col bg-purple-950">
+    <!-- Header/Navigation -->
+    <header
+      class="bg-purple-950 shadow-sm py-4 px-10 border-b border-purple-900 relative z-20"
+    >
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-2xl font-bold gradient-text">LinguaBlog</h1>
+        <nav class="hidden md:flex space-x-7">
+          <a
+            href="index.html"
+            class="text-gray-200 hover:text-white font-medium py-2"
+            >Home</a
+          >
+          <a href="#" class="text-gray-200 hover:text-white font-medium py-2"
+            >Explore</a
+          >
+          <a
+            href="aboutus.html"
+            class="text-gray-200 hover:text-white font-medium py-2"
+            >About</a
+          >
+          <a
+            href="contactus.html"
+            class="text-gray-200 hover:text-white font-medium py-2"
+            >Contact</a
+          >
+          <img src="assests/profile-user1.png" alt="" class="w-9 h-9" />
+        </nav>
+      </div>
+    </header>
+
+    <!-- Profile Content Section -->
+    <main class="flex-grow container mx-auto px-4 md:px-10">
+      <div class="max-w-6xl mx-auto">
+        <!-- Profile Header -->
+        <div
+          class="flex flex-col md:flex-row gap-8 mx-12 my-8 profile-card rounded-xl p-6"
+        >
+          <!-- Profile Picture -->
+          <div class="w-full md:w-1/3 lg:w-1/4 flex justify-center">
+            <div
+              class="w-48 h-48 rounded-full bg-purple-800 border-4 border-purple-600 overflow-hidden"
+            >
+              <img
+                src="https://via.placeholder.com/200"
+                alt="Tanvi Mane"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          <!-- Profile Info -->
+          <div
+            class="w-full md:w-2/3 lg:w-3/4 text-center content-center md:text-left"
+          >
+            <h1 class="text-3xl md:text-4xl font-bold text-white mb-2">
+              Tanvi Mane
+            </h1>
+            <p class="text-lg text-gray-300 mb-6 max-w-2xl">
+              Passionate blogger exploring cultures, languages, and human
+              stories.<br />
+              Writing to connect minds and inspire change—one post at a time.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col md:flex-row md:space-x-8 space-y-8 md:space-y-0 m-12 rounded-xl"
+        >
+          <!-- User Details Section -->
+          <div class="profile-card rounded-xl p-6 w-full sm:w-full md:w-1/2">
+            <h2
+              class="text-xl font-bold text-white mb-6 pb-2 border-b border-purple-800"
+            >
+              USER DETAILS
+            </h2>
+            <div class="space-y-4">
+              <div>
+                <h3 class="text-sm font-medium text-gray-400">Full Name</h3>
+                <p class="text-white">Tanvi Rajaram Mane</p>
+              </div>
+              <div>
+                <h3 class="text-sm font-medium text-gray-400">Email</h3>
+                <p class="text-white">tanvimane322@gmail.com</p>
+              </div>
+              <div>
+                <h3 class="text-sm font-medium text-gray-400">Date of Birth</h3>
+                <p class="text-white">December 1, 2003</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- User Stats Section -->
+          <div class="profile-card rounded-xl p-6 w-full sm:w-full md:w-1/2">
+            <h2
+              class="text-xl font-bold text-white mb-6 pb-2 border-b border-purple-800"
+            >
+              USER STATS
+            </h2>
+            <div class="grid grid-cols-3 gap-4 text-center">
+              <div class="p-2">
+                <p class="text-3xl font-bold text-white mb-1">5</p>
+                <p class="text-sm text-gray-400">Blogs Written</p>
+              </div>
+              <div class="p-2">
+                <p class="text-3xl font-bold text-white mb-1">50</p>
+                <p class="text-sm text-gray-400">Likes Received</p>
+              </div>
+              <div class="p-2">
+                <p class="text-3xl font-bold text-white mb-1">20</p>
+                <p class="text-sm text-gray-400">Comments Received</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- user written blogs -->
+        <div class="profile-card m-12 rounded-xl p-6">
+          <div class="relative z-10 container mx-auto mb-4">
+            <h2 class="text-xl font-bold text-white text-center mb-4">
+              USER CONTRIBUTIONS
+            </h2>
+
+            <!-- Horizontal Scroll Container -->
+            <div class="pb-4 overflow-x-auto">
+              <div class="flex space-x-8 w-max min-w-full pb-4 pt-5">
+                <!-- Blog Card 1 -->
+                <div
+                  class="blog-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 border border-gray-200 flex-shrink-0 w-80"
+                >
+                  <div
+                    class="h-48 bg-gradient-to-r from-blue-100 to-purple-100 relative overflow-hidden"
+                  >
+                    <img
+                      src="assests/travel-blog.jpeg"
+                      alt="travel-blog"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">
+                      Travel Blog
+                    </h3>
+                    <p class="text-sm text-gray-500 mb-4">Tanvi Mane</p>
+                    <p class="text-gray-600">
+                      Discover inspiring things from research to guide, written
+                      in merged languages
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Blog Card 2 -->
+                <div
+                  class="blog-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 border border-gray-200 flex-shrink-0 w-80"
+                >
+                  <div
+                    class="h-48 bg-gradient-to-r from-blue-100 to-purple-100 relative overflow-hidden"
+                  >
+                    <img
+                      src="assests/nature-blog.jpeg"
+                      alt="nature-blog"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">
+                      Nature Blog
+                    </h3>
+                    <p class="text-sm text-gray-500 mb-4">Nikhil Chaughule</p>
+                    <p class="text-gray-600">
+                      Discover inspiring things from research to guide, written
+                      in merged languages
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Blog Card 3 -->
+                <div
+                  class="blog-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 border border-gray-200 flex-shrink-0 w-80"
+                >
+                  <div
+                    class="h-48 bg-gradient-to-r from-blue-100 to-purple-100 relative overflow-hidden"
+                  >
+                    <img
+                      src="assests/technology-blog.jpeg"
+                      alt="technology-blog"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">
+                      Technology Blog
+                    </h3>
+                    <p class="text-sm text-gray-500 mb-4">Kunal Kavathekar</p>
+                    <p class="text-gray-600">
+                      Discover inspiring things from research to guide, written
+                      in merged languages
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Additional Blog Card 4 -->
+                <div
+                  class="blog-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 border border-gray-200 flex-shrink-0 w-80"
+                >
+                  <div
+                    class="h-48 bg-gradient-to-r from-blue-100 to-purple-100 relative overflow-hidden"
+                  >
+                    <img
+                      src="assests/travel-blog.jpeg"
+                      alt="lifestyle-blog"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">
+                      Lifestyle Blog
+                    </h3>
+                    <p class="text-sm text-gray-500 mb-4">Priya Sharma</p>
+                    <p class="text-gray-600">
+                      Discover inspiring things from research to guide, written
+                      in merged languages
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Additional Blog Card 5 -->
+                <div
+                  class="blog-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300 border border-gray-200 flex-shrink-0 w-80"
+                >
+                  <div
+                    class="h-48 bg-gradient-to-r from-blue-100 to-purple-100 relative overflow-hidden"
+                  >
+                    <img
+                      src="assests/nature-blog.jpeg"
+                      alt="education-blog"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">
+                      Education Blog
+                    </h3>
+                    <p class="text-sm text-gray-500 mb-4">Dr. Amit Patel</p>
+                    <p class="text-gray-600">
+                      Discover inspiring things from research to guide, written
+                      in merged languages
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="relative bg-gradient-to-r from-purple-700 to-purple-950 text-white py-12 px-10 mt-auto text-center"
+    >
+      <!-- Glowing Background Elements -->
+      <div class="absolute inset-0 overflow-hidden">
+        <div
+          class="absolute bottom-10 right-10 w-32 h-32 rounded-full bg-blue-400 opacity-10 blur-xl"
+        ></div>
+      </div>
+
+      <div
+        class="relative z-10 container mx-auto grid grid-cols-1 md:grid-cols-4"
+      >
+        <div>
+          <h3 class="text-xl font-bold mb-4">LinguaBlog</h3>
+        </div>
+
+        <div>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="hover:text-blue-300">Home</a></li>
+            <li>
+              <a href="aboutus.html" class="hover:text-blue-300">About</a>
+            </li>
+            <li>
+              <a href="contactus.html" class="hover:text-blue-300">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="mailto:kunalkavathekar@gmail.com"
+                class="hover:text-blue-300"
+                >Email</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/kunal-kavathekar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                class="hover:text-blue-300"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/kunalsk36?igsh=dW84dWNxMHh1cDFq"
+                class="hover:text-blue-300"
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://x.com/Kunalsk369?t=_uTprvE-C0CEUtzbF4_WVA&s=09"
+                class="hover:text-blue-300"
+                >Twitter</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-blue-300">Privacy policy</a></li>
+            <li>
+              <a href="#" class="hover:text-blue-300">Terms of Service</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="relative z-10 container mx-auto mt-12 pt-6 border-t border-gray-700 text-center text-gray-400"
+      >
+        <p>&copy; 2025 LinguaBlog. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

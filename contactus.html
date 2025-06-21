@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - LinguaBlog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="min-h-screen flex flex-col bg-purple-950">
+    <!-- Header/Navigation -->
+    <header
+      class="bg-purple-950 shadow-sm py-4 px-10 border-b border-purple-900 relative z-20"
+    >
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-2xl font-bold gradient-text">LinguaBlog</h1>
+        <nav class="hidden md:flex space-x-7">
+          <a href="/" class="text-gray-200 hover:text-white font-medium py-2"
+            >Home</a
+          >
+          <a href="#" class="text-gray-200 hover:text-white font-medium py-2"
+            >Explore</a
+          >
+          <a
+            href="/about"
+            class="text-gray-200 hover:text-white font-medium py-2"
+            >About</a
+          >
+          <a href="/contact" class="text-white font-medium py-2">Contact</a>
+          <a
+            href="#"
+            class="text-gray-200 hover:text-white hover:bg-purple-700 font-medium bg-purple-800 py-2 px-4 rounded-full"
+            >Log In</a
+          >
+          <a
+            href="#"
+            class="text-gray-200 hover:text-white hover:bg-purple-700 font-medium bg-purple-800 py-2 px-4 rounded-full"
+            >Sign Up</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative py-20 px-10 bg-purple-950 overflow-hidden">
+      <div class="glow-effect"></div>
+      <div class="container mx-auto text-center relative z-10">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+          Contact Us
+        </h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          We'd love to hear from you! Reach out with questions, feedback, or
+          partnership opportunities.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="py-16 px-10 bg-purple-950">
+      <div class="container mx-auto max-w-6xl">
+        <div class="flex flex-col lg:flex-row gap-12">
+          <!-- Contact Info -->
+          <div class="lg:w-1/2">
+            <h2 class="text-3xl font-bold text-white mb-8">Get in Touch</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Email Card -->
+              <div
+                class="contact-card bg-purple-900/50 rounded-xl p-6 border border-purple-800"
+              >
+                <div class="text-blue-400 text-3xl mb-4">✉️</div>
+                <h3 class="text-xl font-bold text-white mb-2">Email Us</h3>
+                <p class="text-gray-300 mb-4">For general inquiries</p>
+                <a
+                  href="mailto:kunalkavathekar@gmail.com"
+                  class="text-blue-400 hover:text-blue-300 font-medium"
+                  >kunalkavathekar@gmail.com</a
+                >
+              </div>
+
+              <!-- Instagram Card -->
+              <div
+                class="contact-card bg-purple-900/50 rounded-xl p-6 border border-purple-800"
+              >
+                <div class="text-blue-400 text-3xl mb-4">🌐</div>
+                <h3 class="text-xl font-bold text-white mb-2">Instagram</h3>
+                <p class="text-gray-300 mb-4">Connect with us on Instagram</p>
+
+                <a
+                  href="https://www.instagram.com/kunalsk36?igsh=dW84dWNxMHh1cDFq"
+                  class="text-blue-400 hover:text-blue-300 font-medium"
+                  >kunalsk36🔗</a
+                >
+              </div>
+
+              <!-- LinkedIn Card -->
+              <div
+                class="contact-card bg-purple-900/50 rounded-xl p-6 border border-purple-800"
+              >
+                <div class="text-blue-400 text-3xl mb-4">🤝</div>
+                <h3 class="text-xl font-bold text-white mb-2">LinkedIn</h3>
+                <p class="text-gray-300 mb-4">Connect with us on LinkedIn</p>
+
+                <a
+                  href="https://www.linkedin.com/in/kunal-kavathekar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                  class="text-blue-400 hover:text-blue-300 font-medium"
+                  >Kunal Kavathekar🔗</a
+                >
+              </div>
+
+              <!-- X Card -->
+              <div
+                class="contact-card bg-purple-900/50 rounded-xl p-6 border border-purple-800"
+              >
+                <div class="text-blue-400 text-3xl mb-4">🐦</div>
+                <h3 class="text-xl font-bold text-white mb-2">X</h3>
+                <p class="text-gray-300 mb-4">Connect with us on X</p>
+
+                <a
+                  href="https://x.com/Kunalsk369?t=_uTprvE-C0CEUtzbF4_WVA&s=09"
+                  class="text-blue-400 hover:text-blue-300 font-medium"
+                  >Kunalsk369🔗</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="lg:w-1/2">
+            <div class="bg-white rounded-xl p-8 shadow-lg">
+              <h2 class="text-2xl font-bold text-gray-800 mb-6">
+                Send Us a Message
+              </h2>
+              <form>
+                <div class="mb-6">
+                  <label for="name" class="block text-gray-700 font-medium mb-2"
+                    >Your Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  />
+                </div>
+                <div class="mb-6">
+                  <label
+                    for="email"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Email Address</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  />
+                </div>
+                <div class="mb-6">
+                  <label
+                    for="subject"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Subject</label
+                  >
+                  <select
+                    id="subject"
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  >
+                    <option value="">Select a subject</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="support">Technical Support</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="mb-6">
+                  <label
+                    for="message"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Your Message</label
+                  >
+                  <textarea
+                    id="message"
+                    rows="5"
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold py-3 px-6 rounded-lg hover:opacity-90 transition duration-300 shadow-lg"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="relative bg-gradient-to-r from-purple-700 to-purple-950 text-white py-12 px-10 mt-auto text-center"
+    >
+      <!-- Glowing Background Elements -->
+      <div class="absolute inset-0 overflow-hidden">
+        <div
+          class="absolute bottom-10 right-10 w-32 h-32 rounded-full bg-blue-400 opacity-10 blur-xl"
+        ></div>
+      </div>
+
+      <div
+        class="relative z-10 container mx-auto grid grid-cols-1 md:grid-cols-4"
+      >
+        <div>
+          <h3 class="text-xl font-bold mb-4">LinguaBlog</h3>
+        </div>
+
+        <div>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-blue-300">Home</a></li>
+            <li><a href="#" class="hover:text-blue-300">About</a></li>
+            <li><a href="#" class="hover:text-blue-300">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-blue-300">Email</a></li>
+            <li><a href="#" class="hover:text-blue-300">LinkedIn</a></li>
+            <li><a href="#" class="hover:text-blue-300">Instagram</a></li>
+            <li><a href="#" class="hover:text-blue-300">Twitter</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-blue-300">Privacy policy</a></li>
+            <li>
+              <a href="#" class="hover:text-blue-300">Terms of Service</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="relative z-10 container mx-auto mt-12 pt-6 border-t border-gray-700 text-center text-gray-400"
+      >
+        <p>&copy; 2025 LinguaBlog. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

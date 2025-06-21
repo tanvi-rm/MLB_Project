@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technology Blog - Blog Post Title</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-purple-950">
+    <header
+      class="bg-purple-950 shadow-sm py-4 px-10 border-b border-purple-900 relative z-20"
+    >
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-2xl font-bold gradient-text">LinguaBlog</h1>
+        <nav class="hidden md:flex space-x-7">
+          <a
+            href="index.html"
+            class="text-gray-200 hover:text-white font-medium py-2"
+            >Home</a
+          >
+          <a href="#" class="text-gray-200 hover:text-white font-medium py-2"
+            >Explore</a
+          >
+          <a
+            href="aboutus.html"
+            class="text-gray-200 hover:text-white font-medium py-2"
+            >About</a
+          >
+          <a
+            href="contactus.html"
+            class="text-gray-200 hover:text-white font-medium py-2"
+            >Contact</a
+          >
+          <a
+            href="#"
+            class="text-gray-200 hover:text-white hover:bg-purple-700 font-medium bg-purple-800 py-2 px-4 rounded-full"
+            >Log In</a
+          >
+          <a
+            href="#"
+            class="text-gray-200 hover:text-white hover:bg-purple-700 font-medium bg-purple-800 py-2 px-4 rounded-full"
+            >Sign Up</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- Blog Content Section -->
+    <main class="flex-grow container mx-auto px-10 py-8 max-w-4xl">
+      <div class="bg-white rounded-xl">
+        <!-- Blog Header -->
+        <div class="blogheader bg-[#FFF2F2] px-8 pb-4 pt-8 rounded-t-xl">
+          <!-- Blog Header Section -->
+          <div class="w-full max-w-4xl">
+            <!-- Language Selection Toolbar -->
+            <div class="mb-6">
+              <div class="flex justify-between mb-8">
+                <div>
+                  <label class="block font-medium text-gray-800 mb-4"
+                    >Select Blog Language:</label
+                  >
+                  <div class="flex flex-wrap gap-3">
+                    <button
+                      class="language-btn px-4 py-2 md:px-4 md:py-2 md:text-base rounded-full bg-purple-600 border border-gray-700 text-white font-medium"
+                      data-lang="en"
+                    >
+                      English
+                    </button>
+                    <button
+                      class="language-btn px-4 py-2 md:px-4 md:py-2 md:text-base rounded-full bg-transparent border border-gray-700 text-gray-700 font-medium"
+                      data-lang="hi"
+                    >
+                      हिन्दी (Hindi)
+                    </button>
+                    <button
+                      class="language-btn px-4 py-2 md:px-4 md:py-2 md:text-base rounded-full bg-transparent border border-gray-700 text-gray-700 font-medium"
+                      data-lang="mr"
+                    >
+                      मराठी (Marathi)
+                    </button>
+                  </div>
+                </div>
+                <div class="flex items-start justify-between mb-8">
+                  <div class="flex items-center space-x-4">
+                    <button
+                      class="flex items-center space-x-2 text-gray-700 hover:text-black"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                        />
+                      </svg>
+                      <span>1.2K Likes</span>
+                    </button>
+                    <button
+                      class="flex items-center space-x-2 text-gray-700 hover:text-black"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                        />
+                      </svg>
+                      <span>42 Comments</span>
+                    </button>
+                    <button
+                      class="flex items-center space-x-2 text-gray-700 hover:text-black"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"
+                        />
+                      </svg>
+                      <span>Share</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex space-x-8">
+                <div class="w-1/2">
+                  <!-- Blog Title -->
+                  <h1 class="text-4xl font-bold text-gray-800 mb-4">
+                    Technology Blog
+                  </h1>
+
+                  <!-- Blog Description -->
+                  <p class="text-xl text-gray-600 mb-6">
+                    Discover inspiring blogs from around the globe, written in
+                    multiple languages.
+                  </p>
+
+                  <!-- Author Info -->
+                  <div class="flex items-center space-x-4 mb-6">
+                    <div
+                      class="w-12 h-12 rounded-full bg-purple-700 flex items-center justify-center text-white font-bold"
+                    >
+                      TR
+                    </div>
+                    <div>
+                      <h3 class="text-gray-800 font-medium">
+                        Tanvi Rajaram Mane
+                      </h3>
+                      <p class="text-gray-600 text-sm">MCA student</p>
+                    </div>
+                  </div>
+                  <div class="text-gray-600 text-sm ml-auto">
+                    Last updated: December 1, 2003
+                  </div>
+                </div>
+                <div class="w-1/2 h-[200px] overflow-hidden">
+                  <img
+                    src="assests/technology-blog.jpeg"
+                    alt="blog-cover"
+                    class="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Content -->
+        <article class="prose max-w-none px-10 py-8">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+            nisi, vitae facere reprehenderit quae consequatur! Explicabo, quo!
+            Facilis accusamus amet quos? Non eligendi in voluptatum facilis
+            quasi provident quos, exercitationem pariatur, itaque quas
+            consectetur explicabo numquam, deserunt magni? Distinctio quia ad
+            doloremque quos deleniti nobis. Ducimus maxime reiciendis at sequi
+            vitae perspiciatis itaque vel obcaecati iusto! Tenetur, dicta, nisi
+            maxime vero delectus itaque necessitatibus nihil reiciendis, omnis
+            soluta quibusdam vel eius! Aut iure labore at ipsum tenetur beatae,
+            cum tempora eveniet velit quisquam distinctio facere est odio
+            molestias esse omnis perspiciatis accusantium voluptates mollitia.
+            Vitae nam ducimus libero maxime dolor, eius recusandae quo
+            architecto expedita debitis perferendis adipisci aspernatur sapiente
+            numquam similique tempore molestiae perspiciatis ipsum fugiat a
+            quam, corrupti quibusdam. Minima asperiores dignissimos dolor iusto
+            et assumenda perspiciatis voluptatem eaque explicabo fuga deleniti
+            eveniet non quidem suscipit, error eum. Blanditiis earum voluptatum
+            cupiditate. Earum voluptas quas fugiat iste exercitationem odit
+            corrupti delectus nisi dolorum quam, pariatur sequi voluptates animi
+            assumenda doloremque odio autem. Dolorem, animi alias eius
+            perspiciatis expedita recusandae asperiores corporis officia
+            corrupti similique tempora? In consectetur illo quo ex repellendus
+            impedit dolor aliquam ipsum, dolore unde facere quaerat
+            reprehenderit eveniet aspernatur fugiat amet ipsam laborum facilis,
+            labore repudiandae quidem sint. Necessitatibus omnis saepe hic fugit
+            velit vero numquam reprehenderit consequatur debitis esse, minus,
+            temporibus repellat est earum officia porro culpa ullam sunt enim
+            possimus. Vitae exercitationem perspiciatis magnam sapiente id ab.
+            Quis earum explicabo aliquid, laudantium beatae ad asperiores
+            officiis iure tempore totam enim quaerat illum nesciunt fugit nobis
+            placeat ut vitae sit aut voluptatem? Est voluptate illum qui fuga
+            sequi nam fugiat nostrum quia quo explicabo. Excepturi unde rerum
+            quasi ipsum cumque esse repellendus nisi neque, illum deleniti harum
+            aperiam assumenda natus voluptate distinctio a totam? Eius quibusdam
+            tempore omnis id perferendis quae veritatis labore fugit.
+          </p>
+        </article>
+
+        <!-- Engagement Section -->
+        <div class="mt-12 pt-8 border-t border-gray-200 px-10 py-8">
+          <div class="flex items-center justify-between mb-8">
+            <div class="flex items-center space-x-4">
+              <button
+                class="flex items-center space-x-2 text-gray-600 hover:text-black"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  />
+                </svg>
+                <span>1.2K Likes</span>
+              </button>
+              <button
+                class="flex items-center space-x-2 text-gray-600 hover:text-black"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                  />
+                </svg>
+                <span>42 Comments</span>
+              </button>
+            </div>
+            <div>
+              <button class="text-gray-600 hover:text-black">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Comments Section -->
+          <div class="mb-8">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Comments</h3>
+            <div class="space-y-4">
+              <!-- Comment 1 -->
+              <div class="flex space-x-4">
+                <div
+                  class="w-10 h-10 rounded-full bg-purple-700 flex-shrink-0 flex items-center justify-center text-white font-bold"
+                >
+                  NK
+                </div>
+                <div class="bg-gray-100 rounded-xl p-4 flex-grow">
+                  <div class="mb-2">
+                    <h4 class="font-medium text-gray-800">Nikhil C.</h4>
+                  </div>
+                  <p class="text-gray-600">
+                    Great article! Really enjoyed reading about the future of
+                    technology.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Comment 2 -->
+              <div class="flex space-x-4">
+                <div
+                  class="w-10 h-10 rounded-full bg-blue-700 flex-shrink-0 flex items-center justify-center text-white font-bold"
+                >
+                  SK
+                </div>
+                <div class="bg-gray-100 rounded-xl p-4 flex-grow">
+                  <div class="mb-2">
+                    <h4 class="font-medium text-gray-800">Kunal K.</h4>
+                  </div>
+                  <p class="text-gray-600">
+                    Interesting perspective. I'd love to see more about AI
+                    developments.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add Comment Form -->
+          <div class="bg-gray-100 rounded-xl p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Add a comment</h3>
+            <form>
+              <textarea
+                class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-600 mb-4"
+                rows="4"
+                placeholder="Share your thoughts..."
+              ></textarea>
+              <button
+                type="submit"
+                class="bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold py-2 px-6 rounded-full hover:opacity-90 transition duration-300"
+              >
+                Post Comment
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="relative bg-gradient-to-r from-purple-700 to-purple-950 text-white py-12 px-10 mt-auto text-center"
+    >
+      <!-- Glowing Background Elements -->
+      <div class="absolute inset-0 overflow-hidden">
+        <div
+          class="absolute bottom-10 right-10 w-32 h-32 rounded-full bg-blue-400 opacity-10 blur-xl"
+        ></div>
+      </div>
+
+      <div
+        class="relative z-10 container mx-auto grid grid-cols-1 md:grid-cols-4"
+      >
+        <div>
+          <h3 class="text-xl font-bold mb-4">LinguaBlog</h3>
+        </div>
+
+        <div>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="hover:text-blue-300">Home</a></li>
+            <li>
+              <a href="aboutus.html" class="hover:text-blue-300">About</a>
+            </li>
+            <li>
+              <a href="contactus.html" class="hover:text-blue-300">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="mailto:kunalkavathekar@gmail.com"
+                class="hover:text-blue-300"
+                >Email</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/kunal-kavathekar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                class="hover:text-blue-300"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/kunalsk36?igsh=dW84dWNxMHh1cDFq"
+                class="hover:text-blue-300"
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://x.com/Kunalsk369?t=_uTprvE-C0CEUtzbF4_WVA&s=09"
+                class="hover:text-blue-300"
+                >Twitter</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-blue-300">Privacy policy</a></li>
+            <li>
+              <a href="#" class="hover:text-blue-300">Terms of Service</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="relative z-10 container mx-auto mt-12 pt-6 border-t border-gray-700 text-center text-gray-400"
+      >
+        <p>&copy; 2025 LinguaBlog. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LinguaBlog - Blogging Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="min-h-screen flex flex-col bg-purple-950">
+    <!-- Header/Navigation -->
+    <header
+      class="bg-purple-950 shadow-sm py-4 px-10 border-b border-purple-900 relative z-20"
+    >
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-2xl font-bold gradient-text">LinguaBlog</h1>
+        <nav class="hidden md:flex space-x-7">
+          <a
+            href="index.html"
+            class="text-gray-200 hover:text-white font-medium py-2"
+            >Home</a
+          >
+          <a href="#" class="text-gray-200 hover:text-white font-medium py-2"
+            >Explore</a
+          >
+          <a
+            href="aboutus.html"
+            class="text-gray-200 hover:text-white font-medium py-2"
+            >About</a
+          >
+          <a
+            href="contactus.html"
+            class="text-gray-200 hover:text-white font-medium py-2"
+            >Contact</a
+          >
+          <a
+            href="#"
+            class="text-gray-200 hover:text-white hover:bg-purple-700 font-medium bg-purple-800 py-2 px-4 rounded-full"
+            >Log In</a
+          >
+          <a
+            href="#"
+            class="text-gray-200 hover:text-white hover:bg-purple-700 font-medium bg-purple-800 py-2 px-4 rounded-full"
+            >Sign Up</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="relative overflow-hidden flex flex-col md:flex-row items-center justify-between px-10 py-6 bg-purple-950"
+    >
+      <!-- Content -->
+      <div
+        class="relative z-10 w-full md:w-1/2 text-center md:text-left left-10"
+      >
+        <h2 class="text-5xl font-bold mb-4 text-white">
+          <span class="block py-2 tracking-widest">Explore</span>
+          <span class="block py-2 tracking-widest">Thoughts</span>
+          <span class="block py-2 tracking-widest">Across Borders</span>
+        </h2>
+        <p class="mb-6 text-lg text-gray-200">
+          Discover emerging blogs from around the globe, written in multiple
+          languages
+        </p>
+        <div class="flex space-x-8">
+          <a href="/">
+            <button
+              class="bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold py-3 px-8 rounded-full hover:opacity-90 transition duration-300 shadow-lg"
+            >
+              READ BLOG
+            </button>
+          </a>
+          <a href="writeblog.html">
+            <button
+              class="bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold py-3 px-8 rounded-full hover:opacity-90 transition duration-300 shadow-lg"
+            >
+              CREATE BLOG
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="relative inline-flex justify-center right-10">
+        <div
+          class="absolute inset-0 bg-purple-700/20 rounded-full blur-xl"
+        ></div>
+        <img
+          src="assests/homeillustration1.png"
+          alt="Blog Illustration"
+          class="relative z-10 w-80"
+        />
+      </div>
+    </section>
+
+    <!-- Featured Blogs Section -->
+    <section class="relative py-16 px-10 bg-purple-950">
+      <div class="relative z-10 container mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12 text-white">
+          MOST VIEWED BLOGS
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Blog Card 1 -->
+          <div
+            class="blog-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 border border-gray-200"
+          >
+            <div
+              class="h-48 bg-gradient-to-r from-blue-100 to-purple-100 relative overflow-hidden"
+            >
+              <img
+                src="assests/travel-blog.jpeg"
+                alt="travel-blog"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2 text-gray-800">Travel Blog</h3>
+              <p class="text-sm text-gray-500 mb-4">Tanvi Mane</p>
+              <p class="text-gray-600">
+                Discover inspiring things from research to guide, written in
+                merged languages
+              </p>
+            </div>
+          </div>
+
+          <!-- Blog Card 2 -->
+          <div
+            class="blog-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300 border border-gray-200"
+          >
+            <div
+              class="h-48 bg-gradient-to-r from-blue-100 to-purple-100 relative overflow-hidden"
+            >
+              <img
+                src="assests/nature-blog.jpeg"
+                alt="nature-blog"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2 text-gray-800">Nature Blog</h3>
+              <p class="text-sm text-gray-500 mb-4">Nikhil Chaughule</p>
+              <p class="text-gray-600">
+                Discover inspiring things from research to guide, written in
+                merged languages
+              </p>
+            </div>
+          </div>
+
+          <!-- Blog Card 3 -->
+          <div
+            class="blog-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300 border border-gray-200"
+          >
+            <div
+              class="h-48 bg-gradient-to-r from-blue-100 to-purple-100 relative overflow-hidden"
+            >
+              <img
+                src="assests/technology-blog.jpeg"
+                alt="technology-blog"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2 text-gray-800">
+                Technology Blog
+              </h3>
+              <p class="text-sm text-gray-500 mb-4">Kunal Kavathekar</p>
+              <p class="text-gray-600">
+                Discover inspiring things from research to guide, written in
+                merged languages
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="relative py-16 px-10 bg-purple-950">
+      <!-- Gradient Background Section -->
+      <div
+        class="relative z-10 bg-gradient-to-r from-blue-500 to-purple-600 py-20 px-6 text-center text-white rounded-xl"
+      >
+        <div class="container mx-auto">
+          <h1 class="text-xl md:text-2xl mb-8">ARE YOU READY?</h1>
+          <p class="text-4xl md:text-5xl font-bold mb-4">
+            Be A Part Of The<br />Next Big Thing
+          </p>
+          <button
+            class="bg-gray-800 text-gray-200 font-bold py-3 px-8 mt-6 rounded-full hover:bg-black transition duration-300 shadow-lg"
+          >
+            <a href="writeblog.html">CREATE BLOG</a>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="relative bg-gradient-to-r from-purple-700 to-purple-950 text-white py-12 px-10 mt-auto text-center"
+    >
+      <!-- Glowing Background Elements -->
+      <div class="absolute inset-0 overflow-hidden">
+        <div
+          class="absolute bottom-10 right-10 w-32 h-32 rounded-full bg-blue-400 opacity-10 blur-xl"
+        ></div>
+      </div>
+
+      <div
+        class="relative z-10 container mx-auto grid grid-cols-1 md:grid-cols-4"
+      >
+        <div>
+          <h3 class="text-xl font-bold mb-4">LinguaBlog</h3>
+        </div>
+
+        <div>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="hover:text-blue-300">Home</a></li>
+            <li>
+              <a href="aboutus.html" class="hover:text-blue-300">About</a>
+            </li>
+            <li>
+              <a href="contactus.html" class="hover:text-blue-300">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="mailto:kunalkavathekar@gmail.com"
+                class="hover:text-blue-300"
+                >Email</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/kunal-kavathekar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                class="hover:text-blue-300"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/kunalsk36?igsh=dW84dWNxMHh1cDFq"
+                class="hover:text-blue-300"
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://x.com/Kunalsk369?t=_uTprvE-C0CEUtzbF4_WVA&s=09"
+                class="hover:text-blue-300"
+                >Twitter</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-blue-300">Privacy policy</a></li>
+            <li>
+              <a href="#" class="hover:text-blue-300">Terms of Service</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="relative z-10 container mx-auto mt-12 pt-6 border-t border-gray-700 text-center text-gray-400"
+      >
+        <p>&copy; 2025 LinguaBlog. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
