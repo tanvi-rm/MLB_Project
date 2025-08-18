@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LinguaBlog - Admin Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: 'Outfit', sans-serif;
+      }
+      .gradient-text {
+        background: linear-gradient(90deg, #4f46e5, #9333ea);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .sidebar {
+        transition: all 0.3s;
+      }
+      @media (max-width: 768px) {
+        .sidebar {
+          transform: translateX(-100%);
+        }
+        .sidebar.active {
+          transform: translateX(0);
+        }
+      }
+      .user-table {
+        display: none;
+      }
+      .user-table.active {
+        display: table;
+      }
+      
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <div class="flex h-screen overflow-hidden">
+      <!-- Sidebar -->
+      <div
+        class="sidebar fixed md:relative w-64 bg-white border-r border-gray-200 h-full z-10"
+      >
+        <div class="p-4 border-b border-gray-200">
+          <h1 class="text-2xl font-bold gradient-text">LinguaBlog</h1>
+          <p class="text-sm text-gray-500 mt-1">Admin Dashboard</p>
+        </div>
+        <nav class="p-4">
+          <div class="mb-6">
+            <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
+              Main
+            </p>
+            <a
+              href="#"
+              class="flex items-center space-x-3 py-2 px-3 rounded-lg bg-purple-50 text-purple-600"
+            >
+              <i class="fas fa-tachometer-alt w-5"></i>
+              <span>Dashboard</span>
+            </a>
+          </div>
+          <div class="mb-6">
+            <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
+              Users
+            </p>
+            <a
+              href="#users-section"
+              class="flex items-center space-x-3 py-2 px-3 rounded-lg text-gray-600 hover:bg-gray-100"
+            >
+              <i class="fas fa-users w-5"></i>
+              <span>User Details</span>
+            </a>
+          </div>
+          <div>
+            <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
+              Support
+            </p>
+            <a
+              href="#feedback"
+              class="flex items-center space-x-3 py-2 px-3 rounded-lg text-gray-600 hover:bg-gray-100 mt-2"
+            >
+              <i class="fas fa-comment-alt w-5"></i>
+              <span>Feedback</span>
+            </a>
+            <a
+              href="#technical-support"
+              class="flex items-center space-x-3 py-2 px-3 rounded-lg text-gray-600 hover:bg-gray-100 mt-2"
+            >
+              <i class="fas fa-tools w-5"></i>
+              <span>Technical Support</span>
+            </a>
+            <a
+              href="#general-query"
+              class="flex items-center space-x-3 py-2 px-3 rounded-lg text-gray-600 hover:bg-gray-100 mt-2"
+            >
+              <i class="fas fa-question-circle w-5"></i>
+              <span>General Query</span>
+            </a>
+            <a
+              href="#other"
+              class="flex items-center space-x-3 py-2 px-3 rounded-lg text-gray-600 hover:bg-gray-100 mt-2"
+            >
+              <i class="fas fa-ellipsis-h w-5"></i>
+              <span>Other</span>
+            </a>
+          </div>
+          <div class="mb-6">
+            <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
+              Account
+            </p>
+            <button
+  id="logoutBtn"
+  class="flex items-center space-x-3 py-2 px-3 rounded-lg text-gray-600 hover:bg-gray-100 mt-2 w-full text-left"
+>
+  <i class="fas fa-sign-out-alt w-5"></i>
+  <span>Logout</span>
+</button>
+
+          </div>
+        </nav>
+      </div>
+
+      <!-- Main Content -->
+      <div class="flex-1 flex flex-col overflow-hidden">
+        <!-- Top Navigation -->
+        <header class="bg-white border-b border-gray-200 py-4 px-6 flex items-center justify-between">
+          <div class="flex items-center">
+            <button id="sidebarToggle" class="md:hidden mr-4 text-gray-500">
+              <i class="fas fa-bars"></i>
+            </button>
+            <h2 class="text-xl font-semibold">Dashboard</h2>
+          </div>
+          <div class="flex items-center space-x-4">
+            <div class="flex items-center">
+              <img
+  id="adminAvatar"
+  src="https://ui-avatars.com/api/?name=Admin&background=7c3aed&color=fff"
+  alt="User"
+  class="w-8 h-8 rounded-full mr-2"
+/>
+<span id="adminName" class="font-medium">Admin</span>
+
+            </div>
+          </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="flex-1 overflow-y-auto p-6 bg-gray-50">
+          <!-- Stats Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-sm font-medium text-gray-500">Contact Forms</p>
+                  <h3 class="text-2xl font-bold mt-1 contact-count">0</h3>
+                </div>
+                <div class="p-3 rounded-lg bg-purple-50 text-purple-600">
+                  <i class="fas fa-envelope"></i>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-sm font-medium text-gray-500">Total Users</p>
+                  <h3 class="text-2xl font-bold mt-1 user-count">0</h3>
+                </div>
+                <div class="p-3 rounded-lg bg-blue-50 text-blue-600">
+                  <i class="fas fa-users"></i>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-sm font-medium text-gray-500">Blog Posts</p>
+                  <h3 class="text-2xl font-bold mt-1 blog-count">0</h3>
+                </div>
+                <div class="p-3 rounded-lg bg-green-50 text-green-600">
+                  <i class="fas fa-blog"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- User Details Section -->
+<div id="users-section" class="bg-white rounded-xl shadow-sm p-6 border border-gray-100 mb-8">
+  <div class="flex items-center justify-between mb-6">
+    <h3 class="text-lg font-semibold">User Details</h3>
+    <button id="viewAllUsers" class="text-sm text-purple-600 hover:underline">View All</button>
+  </div>
+  <div class="overflow-x-auto">
+    <!-- Default Table (first 2 users) -->
+    <table class="min-w-full divide-y divide-gray-200 user-table active">
+      <thead class="bg-gray-50">
+        <tr>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date Joined</th>
+        </tr>
+      </thead>
+      <tbody class="bg-white divide-y divide-gray-200">
+        <!-- Filled by JS -->
+      </tbody>
+    </table>
+
+    <!-- Expanded Table (all users) -->
+    <table class="min-w-full divide-y divide-gray-200 user-table">
+      <thead class="bg-gray-50">
+        <tr>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date Joined</th>
+        </tr>
+      </thead>
+      <tbody class="bg-white divide-y divide-gray-200">
+        <!-- Filled by JS -->
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+          <!-- Contact Responses Section -->
+<div class="bg-white rounded-xl shadow-sm border border-gray-100">
+
+  <!-- Feedback Table -->
+  <div id="feedback" class="p-6 contact-table">
+    <h3 class="text-lg font-semibold mb-6">Feedback Responses</h3>
+    <div class="overflow-x-auto">
+      <table class="min-w-full divide-y divide-gray-200">
+        <thead class="bg-gray-50">
+          <tr>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Message</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Report</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-200">
+          <!-- Filled dynamically by JS -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Technical Support Table -->
+  <div id="technical-support" class="p-6 contact-table">
+    <h3 class="text-lg font-semibold mb-6">Technical Support Responses</h3>
+    <div class="overflow-x-auto">
+      <table class="min-w-full divide-y divide-gray-200">
+        <thead class="bg-gray-50">
+          <tr>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Message</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Report</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-200">
+          <!-- Filled dynamically by JS -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- General Query Table -->
+  <div id="general-query" class="p-6 contact-table">
+    <h3 class="text-lg font-semibold mb-6">General Query Responses</h3>
+    <div class="overflow-x-auto">
+      <table class="min-w-full divide-y divide-gray-200">
+        <thead class="bg-gray-50">
+          <tr>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Message</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Report</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-200">
+          <!-- Filled dynamically by JS -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Other Table -->
+  <div id="other" class="p-6 contact-table">
+    <h3 class="text-lg font-semibold mb-6">Other Responses</h3>
+    <div class="overflow-x-auto">
+      <table class="min-w-full divide-y divide-gray-200">
+        <thead class="bg-gray-50">
+          <tr>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Message</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Report</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-200">
+          <!-- Filled dynamically by JS -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+        </main>
+      </div>
+    </div>
+
+    <!-- Logout Confirmation Modal -->
+<div id="logoutModal" class="fixed inset-0 bg-black bg-opacity-30 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-xl p-8 max-w-sm text-center shadow-lg">
+    <p class="text-lg font-semibold mb-6">Do you want to logout from Admin Dashboard?</p>
+    <div class="flex justify-center gap-4">
+      <button id="confirmLogout" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-full">
+        YES
+      </button>
+      <button id="cancelLogout" class="border border-gray-400 text-black font-semibold py-2 px-6 rounded-full">
+        NO
+      </button>
+    </div>
+  </div>
+</div>
+
+
+   <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('sidebarToggle').addEventListener('click', function () {
+          document.querySelector('.sidebar').classList.toggle('active');
+        });
+
+
+        document.addEventListener('click', function (e) {
+  if (e.target.classList.contains('reply-btn')) {
+    const contactId = e.target.getAttribute('data-id');
+
+    // Give a short delay (optional) before marking as replied
+    setTimeout(() => {
+      fetch(`/admin/contact/${contactId}/reply`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' }
+      })
+        .then(res => res.json())
+        .then(() => {
+          // Refresh the contact list to reflect the change
+          location.reload();  // or call fetchContacts() if modularized
+        })
+        .catch(err => console.error('Failed to mark as replied:', err));
+    }, 2000); // delay to allow email window to open
+  }
+});
+
+
+        fetch('/admin/stats')
+          .then(res => res.json())
+          .then(data => {
+            document.querySelector('.contact-count').textContent = data.contactCount;
+            document.querySelector('.user-count').textContent = data.userCount;
+            document.querySelector('.blog-count').textContent = data.blogCount;
+          })
+          .catch(err => console.error('Failed to load stats:', err));
+
+        fetch('/admin/users')
+          .then(res => res.json())
+          .then(users => {
+            const defaultTable = document.querySelectorAll('.user-table')[0].querySelector('tbody');
+            const expandedTable = document.querySelectorAll('.user-table')[1].querySelector('tbody');
+
+            defaultTable.innerHTML = '';
+            expandedTable.innerHTML = '';
+
+            users.forEach((user, index) => {
+              const row = `
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <div class="flex items-center">
+                      <div class="flex-shrink-0 h-10 w-10">
+                        <img class="h-10 w-10 rounded-full" src="https://ui-avatars.com/api/?name=${encodeURIComponent(user.name)}&background=7c3aed&color=fff" alt="">
+                      </div>
+                      <div class="ml-4">
+                        <div class="text-sm font-medium text-gray-900">${user.name}</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${user.email}</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${new Date(user.createdAt).toISOString().split('T')[0]}</td>
+                </tr>
+              `;
+              if (index < 2) defaultTable.innerHTML += row;
+              expandedTable.innerHTML += row;
+            });
+          })
+          .catch(err => console.error('Failed to load users:', err));
+
+        document.getElementById('viewAllUsers').addEventListener('click', function () {
+          const tables = document.querySelectorAll('.user-table');
+          tables.forEach(t => t.classList.toggle('active'));
+          this.textContent = this.textContent === 'View All' ? 'View Less' : 'View All';
+        });
+
+        fetch('/admin/contacts')
+          .then(res => res.json())
+          .then(data => {
+            const renderRows = (containerId, contacts) => {
+              const tbody = document.querySelector(`#${containerId} tbody`);
+              tbody.innerHTML = '';
+
+              contacts.forEach(contact => {
+                const row = `
+  <tr>
+    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${contact.email}</td>
+    <td class="px-6 py-4 text-sm text-gray-500">${contact.message}</td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-white cursor-pointer ${
+      contact.isReplied ? 'bg-green-500' : 'bg-red-500'
+    }">
+      <a href="mailto:${contact.email}" class="block w-full h-full text-center">
+        ${contact.isReplied ? 'Replied' : 'Reply'}
+      </a>
+    </td>
+  </tr>
+
+
+                `;
+                tbody.innerHTML += row;
+              });
+            };
+
+            renderRows('feedback', data.feedback);
+            renderRows('technical-support', data.technical);
+            renderRows('general-query', data.general);
+            renderRows('other', data.other);
+          })
+          .catch(err => console.error('❌ Failed to load contact responses:', err));
+      });
+
+      document.getElementById('logoutBtn').addEventListener('click', () => {
+    document.getElementById('logoutModal').classList.remove('hidden');
+  });
+
+  document.getElementById('cancelLogout').addEventListener('click', () => {
+    document.getElementById('logoutModal').classList.add('hidden');
+  });
+
+  document.getElementById('confirmLogout').addEventListener('click', () => {
+    fetch('/admin/logout') // Logout route (see backend note below)
+      .then(() => {
+        window.location.href = '/adminlogin.html'; // Redirect to login
+      })
+      .catch(err => {
+        console.error('Logout failed', err);
+        alert('Error during logout.');
+      });
+  });
+
+  fetch('/admin/profile')
+    .then(res => {
+      if (!res.ok) {
+        throw new Error('Unauthorized');
+      }
+      return res.json();
+    })
+    .then(data => {
+      document.getElementById('adminName').textContent = data.name;
+      document.getElementById('adminAvatar').src = `https://ui-avatars.com/api/?name=${encodeURIComponent(data.name)}&background=7c3aed&color=fff`;
+    })
+    .catch(err => {
+      console.error('Failed to fetch admin profile:', err);
+      document.getElementById('adminName').textContent = 'Admin';
+    });
+    
+    </script>
+
+  </body>
+</html>

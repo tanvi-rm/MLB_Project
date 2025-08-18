@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy | BlogAura</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/headerMenu.js"></script>
+  </head>
+  <body class="min-h-screen flex flex-col bg-purple-950">
+    <!-- Header/Navigation -->
+    <header
+      class="bg-purple-950 shadow-sm py-4 px-4 sm:px-10 border-b border-purple-900 relative z-20"
+    >
+      <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo/Brand -->
+        <a href="index.html" class="flex items-center">
+          <img src="assests/Logo.png" alt="BlogAura Logo" class="h-10" />
+          <h1 class="text-2xl font-bold gradient-text">BlogAura</h1>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-7 items-center">
+          <a
+            href="index.html"
+            class="text-gray-200 hover:text-white font-medium py-2"
+            >Home</a
+          >
+          <a
+            href="explore.html"
+            class="text-gray-200 hover:text-white font-medium py-2"
+            >Explore</a
+          >
+          <a
+            href="aboutus.html"
+            class="text-gray-200 hover:text-white font-medium py-2"
+            >About</a
+          >
+          <a
+            href="contactus.html"
+            class="text-gray-200 hover:text-white font-medium py-2"
+            >Contact</a
+          >
+        </nav>
+
+        <!-- Mobile menu button -->
+        <button
+          id="mobileMenuButton"
+          class="md:hidden text-gray-200 focus:outline-none"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div id="mobileMenu" class="mobile-menu md:hidden bg-purple-950">
+        <div class="container mx-auto px-4 pt-2 pb-4 space-y-3">
+          <a
+            href="index.html"
+            class="block text-gray-200 hover:text-white font-medium py-2"
+            >Home</a
+          >
+          <a
+            href="explore.html"
+            class="block text-gray-200 hover:text-white font-medium py-2"
+            >Explore</a
+          >
+          <a
+            href="aboutus.html"
+            class="block text-gray-200 hover:text-white font-medium py-2"
+            >About</a
+          >
+          <a
+            href="contactus.html"
+            class="block text-gray-200 hover:text-white font-medium py-2"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow py-12 px-4 sm:px-10 bg-purple-950">
+      <div class="container mx-auto max-w-4xl">
+        <!-- Page Header -->
+        <div class="text-center mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+            Privacy Policy
+          </h1>
+          <p class="text-gray-300 text-lg">
+            Last updated: <span class="text-purple-300">July 27, 2025</span>
+          </p>
+        </div>
+
+        <!-- Summary Section -->
+        <section
+          class="mb-16 bg-purple-900/30 p-6 rounded-xl border border-purple-800"
+        >
+          <h2 class="text-2xl font-bold text-white mb-4 gradient-text">
+            SUMMARY OF KEY POINTS
+          </h2>
+          <p class="text-gray-300 mb-6">
+            This summary provides key points from our Privacy Notice. Please
+            find more details about any of these topics in the full policy
+            below.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-purple-900/20 p-4 rounded-lg">
+              <h3 class="font-bold text-white mb-2">
+                What personal information do we process?
+              </h3>
+              <p class="text-gray-300 text-sm">
+                When you use our Services, we may process personal information
+                depending on how you interact with us.
+              </p>
+            </div>
+            <div class="bg-purple-900/20 p-4 rounded-lg">
+              <h3 class="font-bold text-white mb-2">
+                Do we process sensitive personal information?
+              </h3>
+              <p class="text-gray-300 text-sm">
+                We do not process sensitive personal information.
+              </p>
+            </div>
+            <div class="bg-purple-900/20 p-4 rounded-lg">
+              <h3 class="font-bold text-white mb-2">
+                How do we keep your information safe?
+              </h3>
+              <p class="text-gray-300 text-sm">
+                We have security measures but cannot guarantee 100% security.
+              </p>
+            </div>
+            <div class="bg-purple-900/20 p-4 rounded-lg">
+              <h3 class="font-bold text-white mb-2">
+                What are your privacy rights?
+              </h3>
+              <p class="text-gray-300 text-sm">
+                You may review, change, or terminate your account at any time.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Full Policy Content -->
+        <div
+          class="bg-purple-900/20 rounded-xl p-6 md:p-8 border border-purple-800"
+        >
+          <!-- Table of Contents -->
+          <div class="mb-10">
+            <h2 class="text-2xl font-bold text-white mb-4 gradient-text">
+              TABLE OF CONTENTS
+            </h2>
+            <ol class="list-decimal list-inside space-y-2 text-gray-300">
+              <li class="hover:text-white">
+                <a href="#info-collect">What information do we collect?</a>
+              </li>
+              <li class="hover:text-white">
+                <a href="#info-process">How do we process your information?</a>
+              </li>
+              <li class="hover:text-white">
+                <a href="#info-share"
+                  >When and with whom do we share your personal information?</a
+                >
+              </li>
+              <li class="hover:text-white">
+                <a href="#cookies"
+                  >Do we use cookies and other tracking technologies?</a
+                >
+              </li>
+              <li class="hover:text-white">
+                <a href="#info-keep">How long do we keep your information?</a>
+              </li>
+              <li class="hover:text-white">
+                <a href="#info-safe">How do we keep your information safe?</a>
+              </li>
+              <li class="hover:text-white">
+                <a href="#privacy-rights">What are your privacy rights?</a>
+              </li>
+              <li class="hover:text-white">
+                <a href="#dnt">Controls for do-not-track features</a>
+              </li>
+              <li class="hover:text-white">
+                <a href="#updates">Do we make updates to this notice?</a>
+              </li>
+              <li class="hover:text-white">
+                <a href="#contact">How can you contact us about this notice?</a>
+              </li>
+              <li class="hover:text-white">
+                <a href="#review"
+                  >How can you review, update, or delete the data we collect
+                  from you?</a
+                >
+              </li>
+            </ol>
+          </div>
+
+          <!-- Policy Sections -->
+          <div class="space-y-12 text-gray-300">
+            <section id="info-collect" class="policy-section">
+              <h2 class="text-xl font-bold text-white mb-4">
+                1. WHAT INFORMATION DO WE COLLECT?
+              </h2>
+              <p class="mb-4">
+                <strong>Personal information you disclose to us</strong>
+              </p>
+              <p class="mb-4">
+                <em>In Short:</em> We collect personal information that you
+                provide to us.
+              </p>
+              <p class="mb-4">
+                We collect personal information that you voluntarily provide to
+                us when you register on the Services, express an interest in
+                obtaining information about us or our products and Services,
+                when you participate in activities on the Services, or otherwise
+                when you contact us.
+              </p>
+              <p class="mb-2">
+                <strong>Personal Information Provided by You.</strong> The
+                personal information that we collect depends on the context of
+                your interactions with us and the Services, the choices you
+                make, and the products and features you use. The personal
+                information we collect may include the following:
+              </p>
+              <ul class="list-disc list-inside mb-4 space-y-1">
+                <li>usernames</li>
+                <li>passwords</li>
+                <li>email addresses</li>
+              </ul>
+              <p>
+                <strong>Sensitive Information.</strong> We do not process
+                sensitive information.
+              </p>
+              <p class="mt-4">
+                All personal information that you provide to us must be true,
+                complete, and accurate, and you must notify us of any changes to
+                such personal information.
+              </p>
+              <p class="mt-4"><strong>Google API</strong></p>
+              <p>
+                Our use of information received from Google APIs will adhere to
+                Google API Services User Data Policy, including the Limited Use
+                requirements.
+              </p>
+            </section>
+
+            <section id="info-process" class="policy-section">
+              <h2 class="text-xl font-bold text-white mb-4">
+                2. HOW DO WE PROCESS YOUR INFORMATION?
+              </h2>
+              <p class="mb-4">
+                <em>In Short:</em> We process your information to provide,
+                improve, and administer our Services, communicate with you, for
+                security and fraud prevention, and to comply with law.
+              </p>
+              <p class="mb-4">
+                We process your personal information for a variety of reasons,
+                depending on how you interact with our Services, including:
+              </p>
+              <ul class="list-disc list-inside space-y-2">
+                <li>
+                  To facilitate account creation and authentication and
+                  otherwise manage user accounts.
+                </li>
+                <li>To send administrative information to you.</li>
+                <li>To protect our Services.</li>
+                <li>
+                  To evaluate and improve our Services, products, marketing, and
+                  your experience.
+                </li>
+              </ul>
+            </section>
+
+            <!-- Section 3 -->
+            <section id="info-share" class="policy-section">
+              <h2 class="text-xl font-bold text-white mb-4">
+                3. WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?
+              </h2>
+              <p class="mb-4">
+                <em>In Short:</em> We may share information in specific
+                situations described in this section and/or with the following
+                third parties.
+              </p>
+              <p class="mb-4">
+                We may need to share your personal information in the following
+                situations:
+              </p>
+              <p>
+                <strong>Business Transfers.</strong> We may share or transfer
+                your information in connection with, or during negotiations of,
+                any merger, sale of company assets, financing, or acquisition of
+                all or a portion of our business to another company.
+              </p>
+            </section>
+
+            <!-- Section 4 -->
+            <section id="cookies" class="policy-section">
+              <h2 class="text-xl font-bold text-white mb-4">
+                4. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?
+              </h2>
+              <p class="mb-4">
+                <em>In Short:</em> We may use cookies and other tracking
+                technologies to collect and store your information.
+              </p>
+              <p class="mb-4">
+                We may use cookies and similar tracking technologies (like web
+                beacons and pixels) to gather information when you interact with
+                our Services. Some online tracking technologies help us maintain
+                the security of our Services and your account, prevent crashes,
+                fix bugs, save your preferences, and assist with basic site
+                functions.
+              </p>
+              <p class="mb-4">
+                We also permit third parties and service providers to use online
+                tracking technologies on our Services for analytics and
+                advertising, including to help manage and display
+                advertisements, to tailor advertisements to your interests, or
+                to send abandoned shopping cart reminders (depending on your
+                communication preferences). The third parties and service
+                providers use their technology to provide advertising about
+                products and services tailored to your interests which may
+                appear either on our Services or on other websites.
+              </p>
+              <p>
+                Specific information about how we use such technologies and how
+                you can refuse certain cookies is set out in our Cookie Notice.
+              </p>
+            </section>
+
+            <!-- Section 5 -->
+            <section id="info-keep" class="policy-section">
+              <h2 class="text-xl font-bold text-white mb-4">
+                5. HOW LONG DO WE KEEP YOUR INFORMATION?
+              </h2>
+              <p class="mb-4">
+                <em>In Short:</em> We keep your information for as long as
+                necessary to fulfil the purposes outlined in this Privacy Notice
+                unless otherwise required by law.
+              </p>
+              <p class="mb-4">
+                We will only keep your personal information for as long as it is
+                necessary for the purposes set out in this Privacy Notice,
+                unless a longer retention period is required or permitted by law
+                (such as tax, accounting, or other legal requirements). No
+                purpose in this notice will require us keeping your personal
+                information for longer than the period of time in which users
+                have an account with us.
+              </p>
+              <p>
+                When we have no ongoing legitimate business need to process your
+                personal information, we will either delete or anonymise such
+                information, or, if this is not possible (for example, because
+                your personal information has been stored in backup archives),
+                then we will securely store your personal information and
+                isolate it from any further processing until deletion is
+                possible.
+              </p>
+            </section>
+
+            <!-- Section 6 -->
+            <section id="info-safe" class="policy-section">
+              <h2 class="text-xl font-bold text-white mb-4">
+                6. HOW DO WE KEEP YOUR INFORMATION SAFE?
+              </h2>
+              <p class="mb-4">
+                <em>In Short:</em> We aim to protect your personal information
+                through a system of organisational and technical security
+                measures.
+              </p>
+              <p class="mb-4">
+                We have implemented appropriate and reasonable technical and
+                organisational security measures designed to protect the
+                security of any personal information we process. However,
+                despite our safeguards and efforts to secure your information,
+                no electronic transmission over the Internet or information
+                storage technology can be guaranteed to be 100% secure, so we
+                cannot promise or guarantee that hackers, cybercriminals, or
+                other unauthorised third parties will not be able to defeat our
+                security and improperly collect, access, steal, or modify your
+                information. Although we will do our best to protect your
+                personal information, transmission of personal information to
+                and from our Services is at your own risk. You should only
+                access the Services within a secure environment.
+              </p>
+            </section>
+
+            <!-- Section 7 -->
+            <section id="privacy-rights" class="policy-section">
+              <h2 class="text-xl font-bold text-white mb-4">
+                7. WHAT ARE YOUR PRIVACY RIGHTS?
+              </h2>
+              <p class="mb-4">
+                <em>In Short:</em> You may review, change, or terminate your
+                account at any time, depending on your country, province, or
+                state of residence.
+              </p>
+              <p class="mb-4">
+                <strong>Withdrawing your consent:</strong> If we are relying on
+                your consent to process your personal information, which may be
+                express and/or implied consent depending on the applicable law,
+                you have the right to withdraw your consent at any time. You can
+                withdraw your consent at any time by contacting us by using the
+                contact details provided in the section 'HOW CAN YOU CONTACT US
+                ABOUT THIS NOTICE?' below.
+              </p>
+              <p class="mb-4">
+                However, please note that this will not affect the lawfulness of
+                the processing before its withdrawal nor, when applicable law
+                allows, will it affect the processing of your personal
+                information conducted in reliance on lawful processing grounds
+                other than consent.
+              </p>
+              <p class="mb-4"><strong>Account Information</strong></p>
+              <p class="mb-4">
+                If you would at any time like to review or change the
+                information in your account or terminate your account, you can:
+              </p>
+              <p class="mb-4">
+                Upon your request to terminate your account, we will deactivate
+                or delete your account and information from our active
+                databases. However, we may retain some information in our files
+                to prevent fraud, troubleshoot problems, assist with any
+                investigations, enforce our legal terms and/or comply with
+                applicable legal requirements.
+              </p>
+              <p class="mb-4">
+                <strong>Cookies and similar technologies:</strong> Most Web
+                browsers are set to accept cookies by default. If you prefer,
+                you can usually choose to set your browser to remove cookies and
+                to reject cookies. If you choose to remove cookies or reject
+                cookies, this could affect certain features or services of our
+                Services.
+              </p>
+              <p>
+                If you have questions or comments about your privacy rights, you
+                may email us at
+                <a
+                  href="mailto:kunalkavathekar@gmail.com"
+                  class="text-blue-400 hover:underline"
+                  >kunalkavathekar@gmail.com</a
+                >.
+              </p>
+            </section>
+
+            <!-- Section 8 -->
+            <section id="dnt" class="policy-section">
+              <h2 class="text-xl font-bold text-white mb-4">
+                8. CONTROLS FOR DO-NOT-TRACK FEATURES
+              </h2>
+              <p class="mb-4">
+                Most web browsers and some mobile operating systems and mobile
+                applications include a Do-Not-Track ('DNT') feature or setting
+                you can activate to signal your privacy preference not to have
+                data about your online browsing activities monitored and
+                collected. At this stage, no uniform technology standard for
+                recognising and implementing DNT signals has been finalised. As
+                such, we do not currently respond to DNT browser signals or any
+                other mechanism that automatically communicates your choice not
+                to be tracked online. If a standard for online tracking is
+                adopted that we must follow in the future, we will inform you
+                about that practice in a revised version of this Privacy Notice.
+              </p>
+            </section>
+
+            <!-- Section 9 -->
+            <section id="updates" class="policy-section">
+              <h2 class="text-xl font-bold text-white mb-4">
+                9. DO WE MAKE UPDATES TO THIS NOTICE?
+              </h2>
+              <p class="mb-4">
+                <em>In Short:</em> Yes, we will update this notice as necessary
+                to stay compliant with relevant laws.
+              </p>
+              <p>
+                We may update this Privacy Notice from time to time. The updated
+                version will be indicated by an updated 'Revised' date at the
+                top of this Privacy Notice. If we make material changes to this
+                Privacy Notice, we may notify you either by prominently posting
+                a notice of such changes or by directly sending you a
+                notification. We encourage you to review this Privacy Notice
+                frequently to be informed of how we are protecting your
+                information.
+              </p>
+            </section>
+
+            <section id="contact" class="policy-section">
+              <h2 class="text-xl font-bold text-white mb-4">
+                10. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?
+              </h2>
+              <p class="mb-4">
+                If you have questions or comments about this notice, you may
+                email us at
+                <a
+                  href="mailto:kunalkavathekar@gmail.com"
+                  class="text-blue-400 hover:underline"
+                  >kunalkavathekar@gmail.com</a
+                >
+                or contact us by post at:
+              </p>
+              <address class="not-italic bg-purple-900/30 p-4 rounded-lg">
+                BlogAura<br />
+                Maruti Mandir<br />
+                Ratnagiri, Maharashtra 415613<br />
+                India
+              </address>
+            </section>
+
+            <section id="review" class="policy-section">
+              <h2 class="text-xl font-bold text-white mb-4">
+                11. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT
+                FROM YOU?
+              </h2>
+              <p>
+                Based on the applicable laws of your country, you may have the
+                right to request access to the personal information we collect
+                from you, details about how we have processed it, correct
+                inaccuracies, or delete your personal information. You may also
+                have the right to withdraw your consent to our processing of
+                your personal information. These rights may be limited in some
+                circumstances by applicable law. To request to review, update,
+                or delete your personal information, please fill out and submit
+                a data subject access request.
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="relative bg-gradient-to-r from-purple-700 to-purple-950 text-white py-12 px-10 mt-auto text-center"
+    >
+      <!-- Glowing Background Elements -->
+      <div class="absolute inset-0 overflow-hidden">
+        <div
+          class="absolute bottom-10 right-10 w-32 h-32 rounded-full bg-blue-400 opacity-10 blur-xl"
+        ></div>
+      </div>
+
+      <div
+        class="relative z-10 container mx-auto grid grid-cols-1 md:grid-cols-4"
+      >
+        <div>
+          <h3 class="text-xl font-bold mb-4">BlogAura</h3>
+        </div>
+
+        <div>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="hover:text-blue-300">Home</a></li>
+            <li>
+              <a href="aboutus.html" class="hover:text-blue-300">About</a>
+            </li>
+            <li>
+              <a href="contactus.html" class="hover:text-blue-300">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="mailto:kunalkavathekar@gmail.com"
+                class="hover:text-blue-300"
+                >Email</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/kunal-kavathekar"
+                class="hover:text-blue-300"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/kunalsk36?igsh=dW84dWNxMHh1cDFq"
+                class="hover:text-blue-300"
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://x.com/Kunalsk369?t=_uTprvE-C0CEUtzbF4_WVA&s=09"
+                class="hover:text-blue-300"
+                >Twitter</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <ul class="space-y-2">
+            <li><a href="privacyPolicy.html" class="hover:text-blue-300">Privacy policy</a></li>
+            <li>
+              <a href="TermsofService.html" class="hover:text-blue-300">Terms of Service</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="relative z-10 container mx-auto mt-12 pt-6 border-t border-gray-700 text-center text-gray-400"
+      >
+        <p>&copy; 2025 BlogAura. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

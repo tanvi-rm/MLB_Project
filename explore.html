@@ -3,27 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Explore Blogs - LinguaBlog</title>
+    <title>Explore Blogs - BlogAura</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/headerMenu.js"></script>
   </head>
   <body class="min-h-screen flex flex-col bg-gray-50">
     <header
-      class="bg-purple-950 shadow-sm py-4 px-10 border-b border-purple-900 relative z-20"
+      class="bg-purple-950 shadow-sm py-4 px-4 sm:px-10 border-b border-purple-900 relative z-20"
     >
       <div class="container mx-auto flex justify-between items-center">
-        <h1 class="text-2xl font-bold gradient-text">LinguaBlog</h1>
-        <nav class="hidden md:flex space-x-7">
+        <!-- Logo/Brand -->
+        <a href="index.html" class="flex items-center">
+          <img src="assests/Logo.png" alt="BlogAura Logo" class="h-10" />
+          <h1 class="text-2xl font-bold gradient-text">BlogAura</h1>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-7 items-center">
           <a
             href="index.html"
             class="text-gray-200 hover:text-white font-medium py-2"
             >Home</a
           >
-          <a href="#" class="text-gray-200 hover:text-white font-medium py-2"
+          <a
+            href="explore.html"
+            class="text-gray-200 hover:text-white font-medium py-2"
             >Explore</a
           >
           <a
@@ -36,17 +45,60 @@
             class="text-gray-200 hover:text-white font-medium py-2"
             >Contact</a
           >
-          <a
-            href="#"
-            class="text-gray-200 hover:text-white hover:bg-purple-700 font-medium bg-purple-800 py-2 px-4 rounded-full"
-            >Log In</a
-          >
-          <a
-            href="#"
-            class="text-gray-200 hover:text-white hover:bg-purple-700 font-medium bg-purple-800 py-2 px-4 rounded-full"
-            >Sign Up</a
-          >
+
+          <!-- Desktop Auth Section -->
+          <div class="desktop-auth"></div>
         </nav>
+
+        <!-- Mobile menu button -->
+        <button
+          id="mobileMenuButton"
+          class="md:hidden text-gray-200 focus:outline-none"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div id="mobileMenu" class="mobile-menu md:hidden bg-purple-950">
+        <div class="container mx-auto px-4 pt-2 pb-4 space-y-3">
+          <a
+            href="index.html"
+            class="block text-gray-200 hover:text-white font-medium py-2"
+            >Home</a
+          >
+          <a
+            href="explore.html"
+            class="block text-gray-200 hover:text-white font-medium py-2"
+            >Explore</a
+          >
+          <a
+            href="aboutus.html"
+            class="block text-gray-200 hover:text-white font-medium py-2"
+            >About</a
+          >
+          <a
+            href="contactus.html"
+            class="block text-gray-200 hover:text-white font-medium py-2"
+            >Contact</a
+          >
+
+          <!-- Mobile Auth Section -->
+          <div class="mobile-auth"></div>
+        </div>
       </div>
     </header>
 
@@ -62,6 +114,7 @@
         <div class="max-w-2xl mx-auto relative mb-8">
           <input
             type="text"
+            id="searchInput"
             placeholder="Search Blogs..."
             class="w-full px-6 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 shadow-sm"
           />
@@ -85,40 +138,47 @@
           </button>
         </div>
 
-        <!-- Categories -->
+        <!-- Hero Section: Category Filters -->
         <div class="flex flex-wrap justify-center gap-3 mb-10">
           <button
-            class="px-4 py-2 bg-purple-600 text-white rounded-full text-sm font-medium"
+            class="category-btn px-4 py-2 bg-purple-600 text-white rounded-full text-sm font-medium"
+            data-category="all"
           >
             All Categories
           </button>
           <button
-            class="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium hover:bg-gray-100"
+            class="category-btn px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium"
+            data-category="technology"
           >
             Technology
           </button>
           <button
-            class="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium hover:bg-gray-100"
+            class="category-btn px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium"
+            data-category="travel"
           >
             Travel
           </button>
           <button
-            class="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium hover:bg-gray-100"
+            class="category-btn px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium"
+            data-category="nature"
           >
             Nature
           </button>
           <button
-            class="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium hover:bg-gray-100"
+            class="category-btn px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium"
+            data-category="lifestyle"
           >
             Lifestyle
           </button>
           <button
-            class="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium hover:bg-gray-100"
+            class="category-btn px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium"
+            data-category="personal"
           >
             Personal
           </button>
           <button
-            class="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium hover:bg-gray-100"
+            class="category-btn px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium"
+            data-category="education"
           >
             Education
           </button>
@@ -137,400 +197,109 @@
             <div class="flex space-x-8 w-max min-w-full pb-4 pt-5">
               <!-- Blog Card 1 -->
               <div
-                class="blog-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 border border-gray-200 flex-shrink-0 w-80"
-              >
-                <div
-                  class="h-48 bg-gradient-to-r from-blue-100 to-purple-100 relative overflow-hidden"
-                >
-                  <img
-                    src="assests/travel-blog.jpeg"
-                    alt="travel-blog"
-                    class="w-full h-full object-cover"
-                  />
-                </div>
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2 text-gray-800">
-                    Travel Blog
-                  </h3>
-                  <p class="text-sm text-gray-500 mb-4">Tanvi Mane</p>
-                  <p class="text-gray-600">
-                    Discover inspiring things from research to guide, written in
-                    merged languages
-                  </p>
-                </div>
-              </div>
-
-              <!-- Blog Card 2 -->
-              <div
-                class="blog-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 border border-gray-200 flex-shrink-0 w-80"
-              >
-                <div
-                  class="h-48 bg-gradient-to-r from-blue-100 to-purple-100 relative overflow-hidden"
-                >
-                  <img
-                    src="assests/nature-blog.jpeg"
-                    alt="nature-blog"
-                    class="w-full h-full object-cover"
-                  />
-                </div>
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2 text-gray-800">
-                    Nature Blog
-                  </h3>
-                  <p class="text-sm text-gray-500 mb-4">Nikhil Chaughule</p>
-                  <p class="text-gray-600">
-                    Discover inspiring things from research to guide, written in
-                    merged languages
-                  </p>
-                </div>
-              </div>
-
-              <!-- Blog Card 3 -->
-              <div
-                class="blog-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 border border-gray-200 flex-shrink-0 w-80"
-              >
-                <div
-                  class="h-48 bg-gradient-to-r from-blue-100 to-purple-100 relative overflow-hidden"
-                >
-                  <img
-                    src="assests/technology-blog.jpeg"
-                    alt="technology-blog"
-                    class="w-full h-full object-cover"
-                  />
-                </div>
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2 text-gray-800">
-                    Technology Blog
-                  </h3>
-                  <p class="text-sm text-gray-500 mb-4">Kunal Kavathekar</p>
-                  <p class="text-gray-600">
-                    Discover inspiring things from research to guide, written in
-                    merged languages
-                  </p>
-                </div>
-              </div>
-
-              <!-- Additional Blog Card 4 -->
-              <div
-                class="blog-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 border border-gray-200 flex-shrink-0 w-80"
-              >
-                <div
-                  class="h-48 bg-gradient-to-r from-blue-100 to-purple-100 relative overflow-hidden"
-                >
-                  <img
-                    src="assests/travel-blog.jpeg"
-                    alt="lifestyle-blog"
-                    class="w-full h-full object-cover"
-                  />
-                </div>
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2 text-gray-800">
-                    Lifestyle Blog
-                  </h3>
-                  <p class="text-sm text-gray-500 mb-4">Priya Sharma</p>
-                  <p class="text-gray-600">
-                    Discover inspiring things from research to guide, written in
-                    merged languages
-                  </p>
-                </div>
-              </div>
-
-              <!-- Additional Blog Card 5 -->
-              <div
-                class="blog-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300 border border-gray-200 flex-shrink-0 w-80"
-              >
-                <div
-                  class="h-48 bg-gradient-to-r from-blue-100 to-purple-100 relative overflow-hidden"
-                >
-                  <img
-                    src="assests/nature-blog.jpeg"
-                    alt="education-blog"
-                    class="w-full h-full object-cover"
-                  />
-                </div>
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2 text-gray-800">
-                    Education Blog
-                  </h3>
-                  <p class="text-sm text-gray-500 mb-4">Dr. Amit Patel</p>
-                  <p class="text-gray-600">
-                    Discover inspiring things from research to guide, written in
-                    merged languages
-                  </p>
-                </div>
-              </div>
+                id="mostViewedBlogs"
+                class="flex space-x-8 w-max min-w-full pb-4 pt-5"
+              ></div>
             </div>
           </div>
         </div>
 
+        <div
+          id="searchResultsSection"
+          class="relative z-10 container mx-auto search-section"
+          style="display: none"
+        >
+          <h2 class="text-3xl font-bold text-center mb-8 text-white">
+            SEARCH RESULTS
+          </h2>
+          <div class="pb-4 overflow-x-auto">
+            <div
+              id="searchResults"
+              class="flex flex-wrap gap-6 justify-center"
+            ></div>
+          </div>
+        </div>
+
+        <!-- Technology Blogs -->
         <div class="relative z-10 container mx-auto mb-12">
           <h2 class="text-3xl font-bold text-center mb-8 text-white">
             TECHNOLOGY BLOGS
           </h2>
-
-          <!-- Horizontal Scroll Container -->
           <div class="pb-4 overflow-x-auto">
-            <div class="flex space-x-8 w-max min-w-full pb-4 pt-5">
-              <!-- Blog Card 1 -->
-              <div
-                class="blog-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 border border-gray-200 flex-shrink-0 w-80"
-              >
-                <div
-                  class="h-48 bg-gradient-to-r from-blue-100 to-purple-100 relative overflow-hidden"
-                >
-                  <img
-                    src="assests/travel-blog.jpeg"
-                    alt="travel-blog"
-                    class="w-full h-full object-cover"
-                  />
-                </div>
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2 text-gray-800">
-                    Travel Blog
-                  </h3>
-                  <p class="text-sm text-gray-500 mb-4">Tanvi Mane</p>
-                  <p class="text-gray-600">
-                    Discover inspiring things from research to guide, written in
-                    merged languages
-                  </p>
-                </div>
-              </div>
-
-              <!-- Blog Card 2 -->
-              <div
-                class="blog-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 border border-gray-200 flex-shrink-0 w-80"
-              >
-                <div
-                  class="h-48 bg-gradient-to-r from-blue-100 to-purple-100 relative overflow-hidden"
-                >
-                  <img
-                    src="assests/nature-blog.jpeg"
-                    alt="nature-blog"
-                    class="w-full h-full object-cover"
-                  />
-                </div>
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2 text-gray-800">
-                    Nature Blog
-                  </h3>
-                  <p class="text-sm text-gray-500 mb-4">Nikhil Chaughule</p>
-                  <p class="text-gray-600">
-                    Discover inspiring things from research to guide, written in
-                    merged languages
-                  </p>
-                </div>
-              </div>
-
-              <!-- Blog Card 3 -->
-              <div
-                class="blog-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 border border-gray-200 flex-shrink-0 w-80"
-              >
-                <div
-                  class="h-48 bg-gradient-to-r from-blue-100 to-purple-100 relative overflow-hidden"
-                >
-                  <img
-                    src="assests/technology-blog.jpeg"
-                    alt="technology-blog"
-                    class="w-full h-full object-cover"
-                  />
-                </div>
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2 text-gray-800">
-                    Technology Blog
-                  </h3>
-                  <p class="text-sm text-gray-500 mb-4">Kunal Kavathekar</p>
-                  <p class="text-gray-600">
-                    Discover inspiring things from research to guide, written in
-                    merged languages
-                  </p>
-                </div>
-              </div>
-
-              <!-- Additional Blog Card 4 -->
-              <div
-                class="blog-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 border border-gray-200 flex-shrink-0 w-80"
-              >
-                <div
-                  class="h-48 bg-gradient-to-r from-blue-100 to-purple-100 relative overflow-hidden"
-                >
-                  <img
-                    src="assests/travel-blog.jpeg"
-                    alt="lifestyle-blog"
-                    class="w-full h-full object-cover"
-                  />
-                </div>
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2 text-gray-800">
-                    Lifestyle Blog
-                  </h3>
-                  <p class="text-sm text-gray-500 mb-4">Priya Sharma</p>
-                  <p class="text-gray-600">
-                    Discover inspiring things from research to guide, written in
-                    merged languages
-                  </p>
-                </div>
-              </div>
-
-              <!-- Additional Blog Card 5 -->
-              <div
-                class="blog-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300 border border-gray-200 flex-shrink-0 w-80"
-              >
-                <div
-                  class="h-48 bg-gradient-to-r from-blue-100 to-purple-100 relative overflow-hidden"
-                >
-                  <img
-                    src="assests/nature-blog.jpeg"
-                    alt="education-blog"
-                    class="w-full h-full object-cover"
-                  />
-                </div>
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2 text-gray-800">
-                    Education Blog
-                  </h3>
-                  <p class="text-sm text-gray-500 mb-4">Dr. Amit Patel</p>
-                  <p class="text-gray-600">
-                    Discover inspiring things from research to guide, written in
-                    merged languages
-                  </p>
-                </div>
-              </div>
+            <div
+              class="category-Technology flex space-x-8 w-max min-w-full pb-4 pt-5"
+            >
+              <!-- Blogs will load here -->
             </div>
           </div>
         </div>
 
+        <!-- TRAVEL Blogs -->
         <div class="relative z-10 container mx-auto mb-12">
           <h2 class="text-3xl font-bold text-center mb-8 text-white">
             TRAVEL BLOGS
           </h2>
-
-          <!-- Horizontal Scroll Container -->
           <div class="pb-4 overflow-x-auto">
-            <div class="flex space-x-8 w-max min-w-full pb-4 pt-5">
-              <!-- Blog Card 1 -->
-              <div
-                class="blog-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 border border-gray-200 flex-shrink-0 w-80"
-              >
-                <div
-                  class="h-48 bg-gradient-to-r from-blue-100 to-purple-100 relative overflow-hidden"
-                >
-                  <img
-                    src="assests/travel-blog.jpeg"
-                    alt="travel-blog"
-                    class="w-full h-full object-cover"
-                  />
-                </div>
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2 text-gray-800">
-                    Travel Blog
-                  </h3>
-                  <p class="text-sm text-gray-500 mb-4">Tanvi Mane</p>
-                  <p class="text-gray-600">
-                    Discover inspiring things from research to guide, written in
-                    merged languages
-                  </p>
-                </div>
-              </div>
+            <div
+              class="category-Travel flex space-x-8 w-max min-w-full pb-4 pt-5"
+            >
+              <!-- Blogs will load here -->
+            </div>
+          </div>
+        </div>
 
-              <!-- Blog Card 2 -->
-              <div
-                class="blog-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 border border-gray-200 flex-shrink-0 w-80"
-              >
-                <div
-                  class="h-48 bg-gradient-to-r from-blue-100 to-purple-100 relative overflow-hidden"
-                >
-                  <img
-                    src="assests/nature-blog.jpeg"
-                    alt="nature-blog"
-                    class="w-full h-full object-cover"
-                  />
-                </div>
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2 text-gray-800">
-                    Nature Blog
-                  </h3>
-                  <p class="text-sm text-gray-500 mb-4">Nikhil Chaughule</p>
-                  <p class="text-gray-600">
-                    Discover inspiring things from research to guide, written in
-                    merged languages
-                  </p>
-                </div>
-              </div>
+        <!-- Nature Blogs -->
+        <div class="relative z-10 container mx-auto mb-12">
+          <h2 class="text-3xl font-bold text-center mb-8 text-white">
+            NATURE BLOGS
+          </h2>
+          <div class="pb-4 overflow-x-auto">
+            <div
+              class="category-Nature flex space-x-8 w-max min-w-full pb-4 pt-5"
+            >
+              <!-- Blogs will load here -->
+            </div>
+          </div>
+        </div>
 
-              <!-- Blog Card 3 -->
-              <div
-                class="blog-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 border border-gray-200 flex-shrink-0 w-80"
-              >
-                <div
-                  class="h-48 bg-gradient-to-r from-blue-100 to-purple-100 relative overflow-hidden"
-                >
-                  <img
-                    src="assests/technology-blog.jpeg"
-                    alt="technology-blog"
-                    class="w-full h-full object-cover"
-                  />
-                </div>
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2 text-gray-800">
-                    Technology Blog
-                  </h3>
-                  <p class="text-sm text-gray-500 mb-4">Kunal Kavathekar</p>
-                  <p class="text-gray-600">
-                    Discover inspiring things from research to guide, written in
-                    merged languages
-                  </p>
-                </div>
-              </div>
+        <!-- Lifestyle Blogs -->
+        <div class="relative z-10 container mx-auto mb-12">
+          <h2 class="text-3xl font-bold text-center mb-8 text-white">
+            LIFESTYLE BLOGS
+          </h2>
+          <div class="pb-4 overflow-x-auto">
+            <div
+              class="category-Lifestyle flex space-x-8 w-max min-w-full pb-4 pt-5"
+            >
+              <!-- Blogs will load here -->
+            </div>
+          </div>
+        </div>
 
-              <!-- Additional Blog Card 4 -->
-              <div
-                class="blog-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 border border-gray-200 flex-shrink-0 w-80"
-              >
-                <div
-                  class="h-48 bg-gradient-to-r from-blue-100 to-purple-100 relative overflow-hidden"
-                >
-                  <img
-                    src="assests/travel-blog.jpeg"
-                    alt="lifestyle-blog"
-                    class="w-full h-full object-cover"
-                  />
-                </div>
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2 text-gray-800">
-                    Lifestyle Blog
-                  </h3>
-                  <p class="text-sm text-gray-500 mb-4">Priya Sharma</p>
-                  <p class="text-gray-600">
-                    Discover inspiring things from research to guide, written in
-                    merged languages
-                  </p>
-                </div>
-              </div>
+        <!-- Personal Blogs -->
+        <div class="relative z-10 container mx-auto mb-12">
+          <h2 class="text-3xl font-bold text-center mb-8 text-white">
+            PERSONAL BLOGS
+          </h2>
+          <div class="pb-4 overflow-x-auto">
+            <div
+              class="category-Personal flex space-x-8 w-max min-w-full pb-4 pt-5"
+            >
+              <!-- Blogs will load here -->
+            </div>
+          </div>
+        </div>
 
-              <!-- Additional Blog Card 5 -->
-              <div
-                class="blog-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300 border border-gray-200 flex-shrink-0 w-80"
-              >
-                <div
-                  class="h-48 bg-gradient-to-r from-blue-100 to-purple-100 relative overflow-hidden"
-                >
-                  <img
-                    src="assests/nature-blog.jpeg"
-                    alt="education-blog"
-                    class="w-full h-full object-cover"
-                  />
-                </div>
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2 text-gray-800">
-                    Education Blog
-                  </h3>
-                  <p class="text-sm text-gray-500 mb-4">Dr. Amit Patel</p>
-                  <p class="text-gray-600">
-                    Discover inspiring things from research to guide, written in
-                    merged languages
-                  </p>
-                </div>
-              </div>
+        <!-- Education Blogs -->
+        <div class="relative z-10 container mx-auto mb-12">
+          <h2 class="text-3xl font-bold text-center mb-8 text-white">
+            EDUCATION BLOGS
+          </h2>
+          <div class="pb-4 overflow-x-auto">
+            <div
+              class="category-Education flex space-x-8 w-max min-w-full pb-4 pt-5"
+            >
+              <!-- Blogs will load here -->
             </div>
           </div>
         </div>
@@ -552,7 +321,7 @@
         class="relative z-10 container mx-auto grid grid-cols-1 md:grid-cols-4"
       >
         <div>
-          <h3 class="text-xl font-bold mb-4">LinguaBlog</h3>
+          <h3 class="text-xl font-bold mb-4">BlogAura</h3>
         </div>
 
         <div>
@@ -578,7 +347,7 @@
             </li>
             <li>
               <a
-                href="https://www.linkedin.com/in/kunal-kavathekar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                href="https://www.linkedin.com/in/kunal-kavathekar"
                 class="hover:text-blue-300"
                 >LinkedIn</a
               >
@@ -602,9 +371,15 @@
 
         <div>
           <ul class="space-y-2">
-            <li><a href="#" class="hover:text-blue-300">Privacy policy</a></li>
             <li>
-              <a href="#" class="hover:text-blue-300">Terms of Service</a>
+              <a href="privacyPolicy.html" class="hover:text-blue-300"
+                >Privacy policy</a
+              >
+            </li>
+            <li>
+              <a href="TermsofService.html" class="hover:text-blue-300"
+                >Terms of Service</a
+              >
             </li>
           </ul>
         </div>
@@ -613,8 +388,10 @@
       <div
         class="relative z-10 container mx-auto mt-12 pt-6 border-t border-gray-700 text-center text-gray-400"
       >
-        <p>&copy; 2025 LinguaBlog. All rights reserved.</p>
+        <p>&copy; 2025 BlogAura. All rights reserved.</p>
       </div>
     </footer>
+
+    <script src="js/exploreScript.js"></script>
   </body>
 </html>
