@@ -1,1 +1,44 @@
-This folder contains all the screenshots of our Multi-Language Blog Website.
+# 📝 BlogAura – Multi-Language Blogging Platform (MLB)
+
+BlogAura (MLB – Multi-Language Blogging Platform) is a full-stack web application that allows users to create, read, like, and comment on blogs in multiple languages.  
+The platform supports user authentication, profile management, blog categorization, and an admin dashboard for monitoring the platform.
+
+---
+
+## 📸 Screenshots
+
+### 🏠 Home Page
+*Landing page introducing the platform with clear navigation.*
+<img src="screenshots/home.png" width="700"/>
+
+---
+
+### 🔎 Explore Blogs
+*Browse blogs by category and discover content from different authors.*
+<img src="screenshots/explore.png" width="700"/>
+
+---
+
+### 📖 Read Blog
+*Read blogs in multiple languages with like and comment functionality.*
+<img src="screenshots/read-blog.png" width="700"/>
+
+---
+
+### ✍️ Write Blog
+*Authenticated users can create and publish multi-language blog posts.*
+<img src="screenshots/write-blog.png" width="700"/>
+
+---
+
+### 👤 User Profile
+*View and manage user details, contributions, and activity.*
+<img src="screenshots/profile.png" width="700"/>
+
+---
+
+### 📊 Admin Dashboard
+*Admin panel to monitor users, blog posts, and contact form submissions.*
+<img src="screenshots/admin-dashboard.png" width="700"/>
+
+---
