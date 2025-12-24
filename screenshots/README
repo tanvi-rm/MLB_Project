@@ -1,0 +1,41 @@
+# 📸 BlogAura – Project Screenshots
+
+## 🏠 Home Page
+*Landing page introducing the Multi-Language Blogging Platform.*
+
+[![Home Page](home.png)](home.png)
+
+---
+
+## 🔎 Explore Blogs
+*Browse blogs by category and discover content from different authors.*
+
+[![Explore Blogs](explore.png)](explore.png)
+
+---
+
+## 📖 Read Blog
+*Read blogs in multiple languages with like and comment functionality.*
+
+[![Read Blog](read-blog.png)](read-blog.png)
+
+---
+
+## ✍️ Write Blog
+*Authenticated users can create and publish multi-language blog posts.*
+
+[![Write Blog](write-blog.png)](write-blog.png)
+
+---
+
+## 👤 User Profile
+*View personal details, blog contributions, and activity.*
+
+[![User Profile](profile.png)](profile.png)
+
+---
+
+## 📊 Admin Dashboard
+*Admin panel to monitor users, blogs, and contact submissions.*
+
+[![Admin Dashboard](admin-dashboard.png)](admin-dashboard.png)
