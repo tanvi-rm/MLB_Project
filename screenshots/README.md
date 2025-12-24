@@ -39,3 +39,5 @@
 *Admin panel to monitor users, blogs, and contact submissions.*
 
 [![Admin Dashboard](admin-dashboard.png)](admin-dashboard.png)
+
+---
